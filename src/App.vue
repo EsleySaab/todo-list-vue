@@ -6,9 +6,9 @@
       <div v-else>
         <TodoFormAdd />
 
-        <TodoItems />
+        <TodoItems v-if="$store.state.todos.length > 0" />
 
-        <TodoEmpty />
+        <TodoEmpty v-else />
       </div>
     </div>
   </div>
