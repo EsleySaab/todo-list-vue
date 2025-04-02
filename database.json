@@ -1,13 +1,23 @@
 {
   "todos": [
     {
-      "title": "Ler livro js",
-      "completed": true,
-      "id": "31cc"
+      "id": "2378",
+      "title": "Estudar JavaScript",
+      "completed": false
     },
     {
-      "id": "4800",
-      "title": "Estudar vue.js",
+      "id": "cd88",
+      "title": "Estudar TypeScript",
+      "completed": false
+    },
+    {
+      "title": "Estudar Vue.js",
+      "completed": true,
+      "id": "bb6e"
+    },
+    {
+      "id": "7b6c",
+      "title": "Estudar React",
       "completed": false
     }
   ]

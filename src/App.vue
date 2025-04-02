@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import { ref } from "vue"
+import { useStore } from "vuex"
 import TodoEmpty from "./components/TodoEmpty.vue"
 import TodoFormAdd from "./components/TodoFormAdd.vue"
 import TodoItems from "./components/TodoItems.vue"
@@ -28,17 +30,18 @@ export default {
     TodoSpinner,
   },
 
-  data() {
-    return {
-      loading: false,
-    }
-  },
+  setup() {
+    const loading = ref(false)
+    const store = useStore()
 
-  created() {
-    this.loading = true
-    this.$store.dispatch("getTodos").finally(() => {
-      this.loading = false
+    loading.value = true
+    store.dispatch("getTodos").finally(() => {
+      loading.value = false
     })
+
+    return {
+      loading,
+    }
   },
 }
 </script>
